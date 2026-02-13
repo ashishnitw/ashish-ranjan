@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Articles from './components/Articles'
+import ArticleDetail from './components/ArticleDetail'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/writings" element={<Articles />} />
+          <Route path="/writings/:slug" element={<ArticleDetail />} />
         </Routes>
       </main>
       <Footer />

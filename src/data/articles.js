@@ -5,7 +5,7 @@ export const articles = [
     excerpt: 'A guide to creating a minimal, elegant portfolio website using React and Vite.',
     date: 'Feb 10, 2026',
     readTime: '5 min',
-    link: '#'
+    slug: 'building-clean-portfolio'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const articles = [
     excerpt: 'Exploring principles of minimalism in modern web design and why less is more.',
     date: 'Feb 5, 2026',
     readTime: '7 min',
-    link: '#'
+    slug: 'minimalist-web-design'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const articles = [
     excerpt: 'Essential patterns and practices for writing clean, maintainable JavaScript code.',
     date: 'Jan 28, 2026',
     readTime: '8 min',
-    link: '#'
+    slug: 'javascript-best-practices'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const articles = [
     excerpt: 'A practical comparison of two powerful CSS layout tools and how to choose between them.',
     date: 'Jan 20, 2026',
     readTime: '6 min',
-    link: '#'
+    slug: 'css-grid-vs-flexbox'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const articles = [
     excerpt: 'Understanding React hooks and how to use them to build powerful functional components.',
     date: 'Jan 12, 2026',
     readTime: '10 min',
-    link: '#'
+    slug: 'react-hooks-guide'
   },
   {
     id: 6,
@@ -45,6 +45,6 @@ export const articles = [
     excerpt: 'Tips and tricks to optimize your React applications for better performance.',
     date: 'Jan 5, 2026',
     readTime: '9 min',
-    link: '#'
+    slug: 'performance-optimization'
   }
 ]
