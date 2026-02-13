@@ -15,12 +15,6 @@ export default function Navigation({ activeSection, setActiveSection }) {
           >
             Writing
           </button>
-          <button
-            className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-            onClick={() => setActiveSection('contact')}
-          >
-            Contact
-          </button>
         </div>
       </div>
     </nav>

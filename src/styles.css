@@ -74,14 +74,6 @@ body {
   padding: 80px 24px;
 }
 
-.footer {
-  text-align: center;
-  padding: 60px 24px 40px;
-  color: var(--text-light);
-  font-size: 13px;
-  border-top: 1px solid var(--border);
-}
-
 /* =============================================================================
    NAVIGATION
    ============================================================================= */
@@ -293,147 +285,51 @@ body {
 }
 
 /* =============================================================================
-   CONTACT SECTION
+   FOOTER
    ============================================================================= */
 
-.contact {
-  animation: fadeIn 0.6s ease-in;
-}
-
-.contact-header {
-  margin-bottom: 48px;
-}
-
-.contact-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 12px;
-  letter-spacing: -0.5px;
-}
-
-.contact-subtitle {
-  font-size: 16px;
+.footer {
+  text-align: center;
+  padding: 20px 20px 20px;
   color: var(--text-light);
-  line-height: 1.6;
+  font-size: 13px;
+  background-color: var(--secondary);
+  border-top: 1px solid var(--border);
 }
 
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-
-.contact-info {
+.footer-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 24px;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.info-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.contact-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 16px;
 }
 
-.contact-links a {
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-link {
   color: var(--text-light);
   text-decoration: none;
+  font-size: 12px;
   transition: color 0.2s ease;
-  font-size: 15px;
-  display: inline-block;
-}
-
-.contact-links a:hover {
-  color: var(--primary);
-}
-
-/* =============================================================================
-   FORM STYLES
-   ============================================================================= */
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-group label {
-  font-weight: 600;
-  color: var(--primary);
-  font-size: 14px;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  background-color: var(--light-bg);
-  color: var(--primary);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-light);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  background-color: var(--secondary);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submit-btn {
-  padding: 12px 24px;
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  align-self: flex-start;
-  font-family: inherit;
-}
-
-.submit-btn:hover {
-  opacity: 0.8;
-  transform: translateY(-1px);
-}
-
-.submit-btn:active {
-  transform: translateY(0);
-}
-
-.success-message {
-  color: #28a745;
   font-weight: 500;
-  font-size: 14px;
-  animation: slideIn 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+}
+
+.footer-text {
+  color: var(--text-light);
+  font-size: 12px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 /* =============================================================================
@@ -441,12 +337,12 @@ body {
    ============================================================================= */
 
 @media (max-width: 768px) {
-  .main-content {
-    padding: 60px 20px;
+  .footer-container {
+    padding: 12px 20px;
   }
 
-  .footer {
-    padding: 40px 20px 30px;
+  .footer-links {
+    gap: 16px;
   }
 
   .nav-container {
@@ -494,12 +390,39 @@ body {
     font-size: 18px;
   }
 
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .main-content {
+    padding: 60px 20px;
   }
 
-  .contact-form {
-    gap: 20px;
+  .nav-container {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-stats {
+    gap: 32px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .articles-title {
+    font-size: 28px;
   }
 }
