@@ -30,7 +30,64 @@ body {
   line-height: 1.6;
 }
 
+/* =============================================================================
+   HEADING STYLES
+   ============================================================================= */
 
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
 
 /* =============================================================================
    APP LAYOUT
@@ -55,7 +112,6 @@ body {
    ============================================================================= */
 
 .navbar {
-  background-color: var(--secondary);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -82,10 +138,18 @@ body {
   border: none;
   cursor: pointer;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo:hover {
   opacity: 0.7;
+}
+
+.logo-image {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -125,11 +189,7 @@ body {
 }
 
 .hero-title {
-  font-size: 56px;
-  font-weight: 700;
-  color: var(--primary);
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+  max-width: 600px;
 }
 
 .hero-description {
@@ -276,15 +336,6 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.article-detail-header h1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 16px;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-}
-
 .article-detail-meta {
   display: flex;
   gap: 16px;
@@ -311,31 +362,12 @@ body {
   color: var(--text);
 }
 
-/* Markdown content styling */
-.article-content h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 16px;
-  color: var(--primary);
-  line-height: 1.3;
-}
-
-.article-content h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 32px;
-  margin-bottom: 12px;
-  color: var(--primary);
-  line-height: 1.3;
-}
-
-.article-content h4 {
+.article-content > p:first-child {
   font-size: 18px;
-  font-weight: 600;
-  margin-top: 24px;
-  margin-bottom: 10px;
-  color: var(--primary);
+  color: var(--text-light);
+  margin-bottom: 32px;
+  line-height: 1.8;
+  font-weight: 500;
 }
 
 .article-content p {
@@ -471,6 +503,30 @@ body {
    ============================================================================= */
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
   .footer-container {
     padding: 12px 20px;
   }
@@ -489,10 +545,6 @@ body {
 
   .nav-link {
     font-size: 13px;
-  }
-
-  .hero-title {
-    font-size: 36px;
   }
 
   .hero-description {
@@ -528,52 +580,17 @@ body {
     padding: 60px 20px;
   }
 
-  .nav-container {
-    padding: 12px 20px;
-  }
-
-  .nav-links {
-    gap: 24px;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-stats {
-    gap: 32px;
-  }
-
-  .stat-value {
-    font-size: 20px;
-  }
-
-  .articles-title {
-    font-size: 28px;
-  }
-
-  .article-detail-header h1 {
-    font-size: 28px;
-  }
-
-  .article-content h2 {
-    font-size: 22px;
-  }
-
-  .article-content h3 {
-    font-size: 18px;
-  }
-
   .article-detail-header {
     margin-bottom: 32px;
     padding-bottom: 24px;
+  }
+
+  .article-detail-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .article-content > p:first-child {
+    font-size: 16px;
   }
 }

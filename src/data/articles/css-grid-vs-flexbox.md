@@ -6,8 +6,6 @@ readTime: 6 min
 slug: css-grid-vs-flexbox
 ---
 
-# CSS Grid vs Flexbox: When to Use Each
-
 A practical comparison of two powerful CSS layout tools and how to choose between them.
 
 ## Introduction

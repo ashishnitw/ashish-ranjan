@@ -6,8 +6,6 @@ readTime: 10 min
 slug: react-hooks-guide
 ---
 
-# React Hooks: A Complete Guide
-
 Understanding React hooks and how to use them to build powerful functional components.
 
 ## What are React Hooks?

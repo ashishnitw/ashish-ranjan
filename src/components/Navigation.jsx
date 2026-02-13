@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import logo from '../assets/logo.jpg'
 
 export default function Navigation() {
   const location = useLocation()
@@ -7,7 +8,7 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          A
+          <img src={logo} alt="Logo" className="logo-image" />
         </Link>
         <div className="nav-links">
           <Link

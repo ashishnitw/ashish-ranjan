@@ -6,8 +6,6 @@ readTime: 7 min
 slug: minimalist-web-design
 ---
 
-# The Art of Minimalist Web Design
-
 Exploring principles of minimalism in modern web design and why less is more.
 
 ## What is Minimalist Design?

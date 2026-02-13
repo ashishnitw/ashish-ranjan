@@ -6,8 +6,6 @@ readTime: 5 min
 slug: building-clean-portfolio
 ---
 
-# Building a Clean Portfolio with React
-
 A guide to creating a minimal, elegant portfolio website using React and Vite.
 
 ## Introduction

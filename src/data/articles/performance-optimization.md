@@ -6,8 +6,6 @@ readTime: 9 min
 slug: performance-optimization
 ---
 
-# Performance Optimization Techniques
-
 Tips and tricks to optimize your React applications for better performance.
 
 ## Why Performance Matters

@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">
+        <h3 className="hero-title">
           Hi, I'm {profile.name}
-        </h1>
+        </h3>
         <p className="hero-description">
           {profile.description}
         </p>
