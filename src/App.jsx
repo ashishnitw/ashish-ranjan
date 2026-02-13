@@ -1,18 +1,18 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Articles from './components/Articles'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 function App() {
-  const [activeSection, setActiveSection] = useState('hero')
-
   return (
     <div className="app">
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Navigation />
       <main className="main-content">
-        {activeSection === 'hero' && <Hero />}
-        {activeSection === 'articles' && <Articles />}
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/writings" element={<Articles />} />
+        </Routes>
       </main>
       <Footer />
     </div>

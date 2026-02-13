@@ -1,20 +1,21 @@
-export default function Navigation({ activeSection, setActiveSection }) {
+import { Link, useLocation } from 'react-router-dom'
+
+export default function Navigation() {
+  const location = useLocation()
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <button
-          onClick={() => setActiveSection('hero')}
-          className="nav-logo"
-        >
-          Ashish Ranjan
-        </button>
+        <Link to="/" className="nav-logo">
+          A
+        </Link>
         <div className="nav-links">
-          <button
-            className={`nav-link ${activeSection === 'articles' ? 'active' : ''}`}
-            onClick={() => setActiveSection('articles')}
+          <Link
+            to="/writings"
+            className={`nav-link ${location.pathname === '/writings' ? 'active' : ''}`}
           >
             Writing
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
