@@ -94,54 +94,8 @@ CSS Grid is a two-dimensional layout system for creating complex layouts with ro
 
 ## Using Both Together
 
-You can use both Flexbox and Grid in the same project:
-
-```css
-/* Grid for overall page layout */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 250px;
-  gap: 20px;
-}
-
-/* Flexbox for navigation within sidebar */
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-```
-
-## Responsive Design with Both
-
-### Flexbox
-```css
-.flex-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.flex-item {
-  flex: 1 1 300px; /* Minimum 300px, grows to fill space */
-}
-```
-
-### Grid
-```css
-.grid-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-```
+You can use both Flexbox and Grid in the same project. Grid for overall page structure and Flexbox for component-level layouts.
 
 ## Conclusion
 
-There's no "better" choice—choose based on your layout needs:
-
-- **Need to distribute items in one direction?** Use Flexbox
-- **Need a two-dimensional layout?** Use Grid
-- **Complex page with component layouts?** Use both!
-
-Master both tools and you'll have the power to create any layout you can imagine.
+Both Flexbox and CSS Grid are powerful tools. Use Grid for page layouts and Flexbox for component layouts. Master both to become a CSS expert!

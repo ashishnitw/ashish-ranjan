@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { fetchMarkdownFile } from '../utils/markdown'
+import { fetchMarkdownFile } from '../data/articlesContent'
 
 export default function ArticleDetail() {
   const { slug } = useParams()

@@ -98,37 +98,8 @@ function addToTotal(amount) {
 
 ## 7. Error Handling
 
-Always handle errors appropriately. Don't silently fail.
-
-```javascript
-async function loadData() {
-  try {
-    const response = await fetch('/api/data');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error('Failed to load data:', error);
-    // Handle error appropriately
-  }
-}
-```
-
-## 8. Naming Conventions
-
-Use clear, descriptive names for variables and functions.
-
-```javascript
-// ❌ Unclear
-const x = getUserData();
-const fn = (d) => d.filter(i => i.age > 18);
-
-// ✅ Clear
-const userData = getUserData();
-const adults = users.filter(user => user.age > 18);
-```
+Always handle errors appropriately. Don't silently fail. Use try-catch blocks and proper error messages.
 
 ## Conclusion
 
-Following these practices will help you write cleaner, more maintainable JavaScript code. Remember that code is read much more often than it's written, so prioritize readability and clarity.
+Following these best practices will help you write cleaner, more maintainable JavaScript code. Keep learning and adapting as the language evolves!

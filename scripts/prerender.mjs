@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const articlesDir = path.join(__dirname, '../public/articles');
+const articlesDir = path.join(__dirname, '../src/data/articles');
 const distDir = path.join(__dirname, '../dist');
 
 function parseFrontmatter(content) {
