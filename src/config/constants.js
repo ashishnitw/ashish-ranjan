@@ -1,11 +1,11 @@
 // Static text constants for the application
 
 export const NAVIGATION = {
-  WRITING: 'Writing'
+  ARTICLES: 'Articles'
 }
 
 export const ARTICLES = {
-  TITLE: 'Writing',
+  TITLE: 'Articles',
   SUBTITLE: 'Thoughts on web development, design, and technology'
 }
 

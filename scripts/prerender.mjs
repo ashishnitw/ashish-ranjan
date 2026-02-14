@@ -70,7 +70,7 @@ function prerender() {
 
   // Create article subdirectories and index.html files
   articles.forEach(article => {
-    const articleDir = path.join(distDir, 'writings', article.slug);
+    const articleDir = path.join(distDir, 'articles', article.slug);
     
     // Create directories recursively
     fs.mkdirSync(articleDir, { recursive: true });

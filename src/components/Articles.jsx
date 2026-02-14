@@ -44,7 +44,7 @@ export default function Articles() {
                 <span className="article-read-time">{article.readTime}</span>
               </div>
               <h3 className="article-title">
-                <Link to={`/writings/${article.slug}`}>{article.title}</Link>
+                <Link to={`/articles/${article.slug}`}>{article.title}</Link>
               </h3>
               <p className="article-excerpt">{article.excerpt}</p>
             </article>

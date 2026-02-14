@@ -13,10 +13,10 @@ export default function Navigation() {
         </Link>
         <div className="nav-links">
           <Link
-            to="/writings"
-            className={`nav-link ${location.pathname === '/writings' ? 'active' : ''}`}
+            to="/articles"
+            className={`nav-link ${location.pathname === '/articles' ? 'active' : ''}`}
           >
-            {NAVIGATION.WRITING}
+            {NAVIGATION.ARTICLES}
           </Link>
         </div>
       </div>

@@ -33,14 +33,14 @@ export default function ArticleDetail() {
     return (
       <div className="article-detail">
         <p>{error || ARTICLE_DETAIL.NOT_FOUND}</p>
-        <Link to="/writings">{ARTICLE_DETAIL.BACK_LINK}</Link>
+        <Link to="/articles">{ARTICLE_DETAIL.BACK_LINK}</Link>
       </div>
     )
   }
 
   return (
     <article className="article-detail">
-      <Link to="/writings" className="back-link">{ARTICLE_DETAIL.BACK_LINK}</Link>
+      <Link to="/articles" className="back-link">{ARTICLE_DETAIL.BACK_LINK}</Link>
       
       <header className="article-detail-header">
         <h1>{metadata.title}</h1>
