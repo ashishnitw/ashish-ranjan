@@ -39,6 +39,25 @@ export function parseFrontmatter(content) {
 }
 
 /**
+ * Get all articles with metadata
+ * @returns {Array} Array of articles with id, metadata, and slug
+ */
+export function getAllArticles() {
+  const articles = Object.entries(articleContents)
+    .map(([slug, content], index) => {
+      const { metadata } = parseFrontmatter(content)
+      return {
+        id: index + 1,
+        slug,
+        ...metadata
+      }
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+
+  return articles
+}
+
+/**
  * Get article content by slug
  * @param {string} slug - The article slug
  * @returns {Promise<Object>} { metadata, content }
