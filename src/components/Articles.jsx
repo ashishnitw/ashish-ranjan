@@ -12,8 +12,7 @@ export default function Articles() {
 
     const query = searchQuery.toLowerCase()
     return articles.filter(article => 
-      article.title.toLowerCase().includes(query) ||
-      article.excerpt.toLowerCase().includes(query)
+      article.title.toLowerCase().includes(query)
     )
   }, [searchQuery, articles])
 
