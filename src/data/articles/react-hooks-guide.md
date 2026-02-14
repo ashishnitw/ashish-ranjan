@@ -1,9 +1,7 @@
 ---
 title: React Hooks: A Complete Guide
-excerpt: Understanding React hooks and how to use them to build powerful functional components.
 date: Jan 12, 2026
-readTime: 10 min
-slug: react-hooks-guide
+draft: false
 ---
 
 Understanding React hooks and how to use them to build powerful functional components.

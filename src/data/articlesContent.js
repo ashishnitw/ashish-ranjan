@@ -39,19 +39,34 @@ export function parseFrontmatter(content) {
 }
 
 /**
+ * Calculate read time based on word count
+ * Assumes average reading speed of 200 words per minute
+ * @param {string} content - The article content
+ * @returns {string} Read time in format "X min"
+ */
+function calculateReadTime(content) {
+  const wordsPerMinute = 200
+  const wordCount = content.trim().split(/\s+/).length
+  const readTimeMinutes = Math.ceil(wordCount / wordsPerMinute)
+  return `${readTimeMinutes} min`
+}
+
+/**
  * Get all articles with metadata
- * @returns {Array} Array of articles with id, metadata, and slug
+ * @returns {Array} Array of published articles with id, metadata, and slug
  */
 export function getAllArticles() {
   const articles = Object.entries(articleContents)
-    .map(([slug, content], index) => {
-      const { metadata } = parseFrontmatter(content)
+    .map(([fileSlug, content], index) => {
+      const { metadata, content: markdownContent } = parseFrontmatter(content)
       return {
         id: index + 1,
-        slug,
-        ...metadata
+        ...metadata,
+        slug: fileSlug, // Use filename-derived slug, overriding any slug from frontmatter
+        readTime: calculateReadTime(markdownContent) // Calculate read time from content
       }
     })
+    .filter(article => article.draft !== 'true' && article.draft !== true) // Filter out draft articles
     .sort((a, b) => new Date(b.date) - new Date(a.date))
 
   return articles

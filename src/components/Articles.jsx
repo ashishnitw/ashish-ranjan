@@ -39,14 +39,12 @@ export default function Articles() {
         <div className="articles-list">
           {filteredArticles.map(article => (
             <article key={article.id} className="article-item">
-              <div className="article-meta">
+              <div className="article-item-content">
                 <time className="article-date">{article.date}</time>
-                <span className="article-read-time">{article.readTime}</span>
+                <h3 className="article-title">
+                  <Link to={`/articles/${article.slug}`}>{article.title}</Link>
+                </h3>
               </div>
-              <h3 className="article-title">
-                <Link to={`/articles/${article.slug}`}>{article.title}</Link>
-              </h3>
-              <p className="article-excerpt">{article.excerpt}</p>
             </article>
           ))}
         </div>

@@ -9,15 +9,15 @@ export const profile = {
   // Stats
   stats: [
     {
-      value: '50+',
+      value: '5+',
       label: 'Articles'
     },
     {
-      value: '100K+',
+      value: '20K+',
       label: 'Readers'
     },
     {
-      value: '10+',
+      value: '8+',
       label: 'Years Experience'
     }
   ],
@@ -26,24 +26,12 @@ export const profile = {
   contactLinks: [
     {
       id: 1,
-      label: 'Email',
-      url: 'mailto:ashishnitw14@gmail.com',
-      external: false
-    },
-    {
-      id: 2,
-      label: 'Twitter',
-      url: 'https://twitter.com',
-      external: true
-    },
-    {
-      id: 3,
       label: 'GitHub',
       url: 'https://github.com/ashishnitw',
       external: true
     },
     {
-      id: 4,
+      id: 2,
       label: 'LinkedIn',
       url: 'https://linkedin.com/in/ashishrx',
       external: true
