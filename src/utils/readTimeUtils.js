@@ -5,6 +5,9 @@
  * @returns {number} Number of icons to display
  */
 export function getReadTimeIconCount(readTime) {
+  if (!readTime || typeof readTime !== 'string') {
+    return 1
+  }
   const minutes = parseInt(readTime.match(/\d+/)?.[0] || '0', 10)
   const iconCount = Math.ceil(minutes / 5)
   return Math.max(1, iconCount)

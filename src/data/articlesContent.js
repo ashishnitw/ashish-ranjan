@@ -83,7 +83,14 @@ export async function fetchMarkdownFile(slug) {
     if (!content) {
       throw new Error('Article not found')
     }
-    return parseFrontmatter(content)
+    const { metadata, content: markdownContent } = parseFrontmatter(content)
+    return {
+      metadata: {
+        ...metadata,
+        readTime: calculateReadTime(markdownContent)
+      },
+      content: markdownContent
+    }
   } catch (error) {
     throw new Error(`Error loading article: ${error.message}`)
   }

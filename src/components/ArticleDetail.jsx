@@ -50,7 +50,7 @@ export default function ArticleDetail() {
           <time>{metadata.date}</time>
           <span className="article-detail-read-time-icons" title={metadata.readTime}>
             {Array.from({ length: getReadTimeIconCount(metadata.readTime) }).map((_, i) => (
-              <Coffee key={i} size={18} />
+              <Coffee key={i} size={16} />
             ))}
           </span>
         </div>
