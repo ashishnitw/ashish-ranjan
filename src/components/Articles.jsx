@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { Coffee } from 'lucide-react'
 import { getAllArticles } from '../data/articlesContent'
+import { getReadTimeIconCount } from '../utils/readTimeUtils'
 import { ARTICLES } from '../config/constants'
 
 export default function Articles() {
@@ -43,6 +45,11 @@ export default function Articles() {
                 <h3 className="article-title">
                   <Link to={`/articles/${article.slug}`}>{article.title}</Link>
                 </h3>
+                <span className="article-read-time-icons" title={article.readTime}>
+                  {Array.from({ length: getReadTimeIconCount(article.readTime) }).map((_, i) => (
+                    <Coffee key={i} size={18} />
+                  ))}
+                </span>
               </div>
             </article>
           ))}

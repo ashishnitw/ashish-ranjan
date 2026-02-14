@@ -338,6 +338,36 @@ h6 {
   white-space: nowrap;
 }
 
+.article-read-time-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  cursor: help;
+  transition: color 0.2s ease;
+}
+
+.article-read-time-icon:hover {
+  color: var(--primary);
+}
+
+.article-read-time-icons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--text-light);
+  cursor: help;
+  transition: color 0.2s ease;
+}
+
+.article-read-time-icons:hover {
+  color: var(--primary);
+}
+
+.article-read-time-icons svg {
+  display: inline-block;
+}
+
 .article-title {
   font-size: 16px;
   font-weight: 500;
@@ -427,6 +457,36 @@ h6 {
   background-color: var(--text-light);
   border-radius: 50%;
   margin-left: -4px;
+}
+
+.article-detail-read-time-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  cursor: help;
+  transition: color 0.2s ease;
+}
+
+.article-detail-read-time-icon:hover {
+  color: var(--primary);
+}
+
+.article-detail-read-time-icons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--text-light);
+  cursor: help;
+  transition: color 0.2s ease;
+}
+
+.article-detail-read-time-icons:hover {
+  color: var(--primary);
+}
+
+.article-detail-read-time-icons svg {
+  display: inline-block;
 }
 
 .article-content {

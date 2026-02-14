@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { Coffee } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { fetchMarkdownFile } from '../data/articlesContent'
+import { getReadTimeIconCount } from '../utils/readTimeUtils'
 import { ARTICLE_DETAIL } from '../config/constants'
 
 export default function ArticleDetail() {
@@ -46,7 +48,11 @@ export default function ArticleDetail() {
         <h1>{metadata.title}</h1>
         <div className="article-detail-meta">
           <time>{metadata.date}</time>
-          <span>{metadata.readTime}</span>
+          <span className="article-detail-read-time-icons" title={metadata.readTime}>
+            {Array.from({ length: getReadTimeIconCount(metadata.readTime) }).map((_, i) => (
+              <Coffee key={i} size={18} />
+            ))}
+          </span>
         </div>
       </header>
 
