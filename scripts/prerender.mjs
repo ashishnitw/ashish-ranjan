@@ -80,11 +80,11 @@ function prerender() {
     console.log(`✅ ${article.slug}`);
   });
 
-  // Create writings directory index
-  const writingsDir = path.join(distDir, 'writings');
-  fs.mkdirSync(writingsDir, { recursive: true });
-  fs.writeFileSync(path.join(writingsDir, 'index.html'), indexHtml);
-  console.log(`✅ /writings`);
+  // Create articles directory index
+  const articlesDir = path.join(distDir, 'articles');
+  fs.mkdirSync(articlesDir, { recursive: true });
+  fs.writeFileSync(path.join(articlesDir, 'index.html'), indexHtml);
+  console.log(`✅ /articles`);
 
   console.log(`\n✨ Prerendering complete! Generated ${articles.length} article pages.`);
 }
