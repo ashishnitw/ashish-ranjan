@@ -1,10 +1,11 @@
 import { profile } from '../data/profile'
+import { FOOTER } from '../config/constants'
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p className="footer-text">&copy; 2026 {profile.name}</p>
+        <p className="footer-text">{FOOTER.COPYRIGHT_TEXT} {profile.name}</p>
         <div className="footer-links">
           {profile.contactLinks.map(link => (
             <a

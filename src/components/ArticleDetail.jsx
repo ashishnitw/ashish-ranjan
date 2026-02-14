@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { fetchMarkdownFile } from '../data/articlesContent'
+import { ARTICLE_DETAIL } from '../config/constants'
 
 export default function ArticleDetail() {
   const { slug } = useParams()
@@ -25,21 +26,21 @@ export default function ArticleDetail() {
   }, [slug])
 
   if (loading) {
-    return <div className="article-detail"><p>Loading...</p></div>
+    return <div className="article-detail"><p>{ARTICLE_DETAIL.LOADING}</p></div>
   }
 
   if (error || !metadata) {
     return (
       <div className="article-detail">
-        <p>{error || 'Article not found'}</p>
-        <Link to="/writings">← Back to all articles</Link>
+        <p>{error || ARTICLE_DETAIL.NOT_FOUND}</p>
+        <Link to="/writings">{ARTICLE_DETAIL.BACK_LINK}</Link>
       </div>
     )
   }
 
   return (
     <article className="article-detail">
-      <Link to="/writings" className="back-link">← Back to all articles</Link>
+      <Link to="/writings" className="back-link">{ARTICLE_DETAIL.BACK_LINK}</Link>
       
       <header className="article-detail-header">
         <h1>{metadata.title}</h1>

@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
+import { NAVIGATION } from '../config/constants'
 
 export default function Navigation() {
   const location = useLocation()
@@ -15,7 +16,7 @@ export default function Navigation() {
             to="/writings"
             className={`nav-link ${location.pathname === '/writings' ? 'active' : ''}`}
           >
-            Writing
+            {NAVIGATION.WRITING}
           </Link>
         </div>
       </div>

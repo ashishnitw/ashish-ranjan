@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { articles } from '../data/articles'
+import { ARTICLES } from '../config/constants'
 
 export default function Articles() {
   return (
     <section className="articles">
       <div className="articles-header">
-        <h2 className="articles-title">Writing</h2>
-        <p className="articles-subtitle">Thoughts on web development, design, and technology</p>
+        <h2 className="articles-title">{ARTICLES.TITLE}</h2>
+        <p className="articles-subtitle">{ARTICLES.SUBTITLE}</p>
       </div>
       
       <div className="articles-list">
