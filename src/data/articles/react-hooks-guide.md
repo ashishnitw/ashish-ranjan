@@ -1,6 +1,6 @@
 ---
 title: React Hooks: A Complete Guide
-date: Jan 12, 2026
+date: Jan 12, 2018
 draft: false
 ---
 

@@ -5,22 +5,6 @@ export const profile = {
   jobTitle: 'Staff Software Engineer',
   location: 'Bengaluru, IN',
   description: "I'm a full-stack developer and writer passionate about building elegant solutions and sharing knowledge. I write about web development, design systems, and software engineering best practices.",
-
-  // Stats
-  stats: [
-    {
-      value: '5+',
-      label: 'Articles'
-    },
-    {
-      value: '20K+',
-      label: 'Readers'
-    },
-    {
-      value: '8+',
-      label: 'Years Experience'
-    }
-  ],
   
   // Contact Links
   contactLinks: [

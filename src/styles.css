@@ -473,7 +473,6 @@ h6 {
 }
 
 .article-detail-meta::after {
-  content: '';
   width: 4px;
   height: 4px;
   background-color: var(--text-light);
