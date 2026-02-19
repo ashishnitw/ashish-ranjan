@@ -1,5 +1,5 @@
 ---
-title: A Practical Guide to Observability for Spring Boot in Production
+title: Designing Observability the Production Way
 date: May 20, 2022
 ---
 
